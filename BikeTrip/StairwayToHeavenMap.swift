@@ -27,15 +27,25 @@ struct StairwayToHeavenMap: View {
 
     
     var body: some View {
+        VStack {
+            Text("The Stairway to Heaven")
+                .font(.title)
         Map(coordinateRegion: $region, interactionModes: .all,
             annotationItems: pins) { pin in
                     
                     MapPin(coordinate: pin.location, tint: .appDarkPink)
+                    
                         
-        } .scaledToFit()
-        .padding(.bottom, 260)
+        }.frame(width: 370, height: 250, alignment: .center) //.scaledToFit()
     }
-    
+        Text("Where is the Stairway to Heaven?")
+            .font(.headline)
+            .padding()
+        Text("""
+            This map above shows the pin location of the satellite at the top of the stairway to heaven on Oahu. From here you will have to decide on whether you trespass and jump fences or attempt the Stairway to Heaven trail from the back entrance. I highly encourage the latter.
+            """)
+            .padding(.horizontal)
+    }
 }
 
 struct StairwayToHeavenMap_Previews: PreviewProvider {

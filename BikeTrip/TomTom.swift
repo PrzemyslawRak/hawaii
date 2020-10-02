@@ -11,13 +11,33 @@ import SwiftUI
 struct TomTom: View {
     var body: some View {
         VStack {
-            VStack {
+            ScrollView(.horizontal) {
+                HStack (spacing: 20) {
             Image("TomTom")
-            .resizable()
-            .scaledToFit()
-            .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
-            .shadow(radius: 10)
-            .padding(.bottom, 20)
+                .resizable()
+                .frame(width: 370, height: 230)
+                .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                .shadow(radius: 10)
+                .padding(.bottom, 20)
+            Image("TomTom1")
+                    .resizable()
+                .frame(width: 370, height: 230)
+                    .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                    .shadow(radius: 10)
+                    .padding(.bottom, 20)
+            Image("TomTom2")
+                    .resizable()
+                .frame(width: 370, height: 230)
+                    .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                    .shadow(radius: 10)
+                    .padding(.bottom, 20)
+            Image("TomTom3")
+                    .resizable()
+                    .frame(width: 370, height: 230)
+                    .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                    .shadow(radius: 10)
+                    .padding(.bottom, 20)
+            }
             }
             VStack {
                 ScrollView {

@@ -11,13 +11,27 @@ import SwiftUI
 struct Kauai: View {
     var body: some View {
         VStack {
-            VStack {
+            ScrollView(.horizontal) {
+                HStack (spacing: 20) {
             Image("Kauai")
                 .resizable()
-                .scaledToFit()
+                .frame(width: 370, height: 230)
                 .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
                 .shadow(radius: 10)
                 .padding(.bottom, 20)
+            Image("Kalalau1")
+                    .resizable()
+                .frame(width: 370, height: 230)
+                    .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                    .shadow(radius: 10)
+                    .padding(.bottom, 20)
+            Image("Kalalau2")
+                    .resizable()
+                .frame(width: 370, height: 230)
+                    .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                    .shadow(radius: 10)
+                    .padding(.bottom, 20)
+            }
             }
             VStack {
                 Text("Kalalau trail, Kauai")

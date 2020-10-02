@@ -43,24 +43,36 @@ struct LoginPage: View {
                 .foregroundColor(.white)
                 HStack {
                     Image(systemName: "person")
-                    .foregroundColor(.secondary)
-        TextField("Login", text: $emailaddress)
+                        .foregroundColor(Color("whiteBlack"))
+                    ZStack(alignment: .leading) {
+                            if emailaddress.isEmpty { Text("Login").foregroundColor(Color("whiteBlack")) }
+                            TextField("", text: $emailaddress)
+                        }
             .frame(width: 250, height: 40, alignment: .center)
                 } .padding(.leading)
                 .background(Capsule().fill(Color.white))
+                .foregroundColor(Color("whiteBlack"))
+                
                 HStack {
                     Image(systemName: "lock")
-                    .foregroundColor(.secondary)
+                    .foregroundColor(Color("whiteBlack"))
                     if showPassword {
-                    TextField("Password", text: $password)
-                        .frame(width: 220, height: 40, alignment: .center)
+                        ZStack(alignment: .leading) {
+                                if password.isEmpty { Text("Password").foregroundColor(Color("whiteBlack")) }
+                            TextField("Password", text: $password)
+                            }
+                        .frame(width: 200, height: 40, alignment: .center)
                     } else {
-                    SecureField("Password",text: $password)
-                        .frame(width: 220, height: 40, alignment: .center)
+                        ZStack(alignment: .leading) {
+                            if password.isEmpty { Text("Password").foregroundColor(Color("whiteBlack")) }
+                            SecureField("Password",text: $password)
+                                .foregroundColor(Color("whiteBlack"))
+                            }
+                        .frame(width: 200, height: 40, alignment: .center)
                     }
                     Button(action: { self.showPassword.toggle()}) {
                         Image(systemName: "eye")
-                    .foregroundColor(.secondary)
+                            .foregroundColor(Color("whiteBlack"))
                             .padding(.trailing, 10)
                                         }
                 } .padding(.leading)
@@ -94,8 +106,6 @@ struct LoginPage: View {
     }
         
 }
-
-
 
 struct LoginPage_Previews: PreviewProvider {
     static var previews: some View {

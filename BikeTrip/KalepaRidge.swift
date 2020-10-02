@@ -11,13 +11,33 @@ import SwiftUI
 struct KalepaRidge: View {
     var body: some View {
         VStack {
-            VStack {
+            ScrollView(.horizontal) {
+                HStack (spacing: 20) {
             Image("KalepaRidge")
-            .resizable()
-            .scaledToFit()
-            .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
-            .shadow(radius: 10)
-            .padding(.bottom, 20)
+                .resizable()
+                .frame(width: 370, height: 230)
+                .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                .shadow(radius: 10)
+                .padding(.bottom, 20)
+            Image("KalepaRidge1")
+                    .resizable()
+                .frame(width: 370, height: 230)
+                    .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                    .shadow(radius: 10)
+                    .padding(.bottom, 20)
+            Image("KalepaRidge2")
+                    .resizable()
+                .frame(width: 370, height: 230)
+                    .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                    .shadow(radius: 10)
+                    .padding(.bottom, 20)
+            Image("KalepaRidge3")
+                    .resizable()
+                    .frame(width: 370, height: 230)
+                    .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                    .shadow(radius: 10)
+                    .padding(.bottom, 20)
+            }
             }
             VStack {
                 ScrollView {

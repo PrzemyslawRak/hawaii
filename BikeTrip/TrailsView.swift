@@ -10,8 +10,7 @@ import SwiftUI
 
 struct TrailsView: View {
     var body: some View {
-        ZStack {
-            Color("myblue")
+
             VStack {
             Text("HAWAII TRAILS")
                 .font(.largeTitle)
@@ -64,7 +63,7 @@ struct TrailsView: View {
                 
                 
             }
-        } .background(Color("myblue"))
+        
     }
 }
 

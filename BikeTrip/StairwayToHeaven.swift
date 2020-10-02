@@ -28,14 +28,35 @@ extension View {
 struct StairwayToHeaven: View {
     var body: some View {
         VStack {
-            VStack {
+            ScrollView(.horizontal) {
+                HStack (spacing: 20) {
             Image("StairwayToHeaven")
-            .resizable()
-            .scaledToFit()
-            .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
-            .shadow(radius: 10)
-            .padding(.bottom, 20)
+                .resizable()
+                .frame(width: 370, height: 230)
+                .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                .shadow(radius: 10)
+                .padding(.bottom, 20)
+            Image("StairwayToHeaven1")
+                    .resizable()
+                .frame(width: 370, height: 230)
+                    .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                    .shadow(radius: 10)
+                    .padding(.bottom, 20)
+            Image("StairwayToHeaven2")
+                    .resizable()
+                .frame(width: 370, height: 230)
+                    .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                    .shadow(radius: 10)
+                    .padding(.bottom, 20)
+            Image("StairwayToHeaven3")
+                    .resizable()
+                    .frame(width: 370, height: 230)
+                    .cornerRadius(30, corners: [.bottomLeft, .bottomRight])
+                    .shadow(radius: 10)
+                    .padding(.bottom, 20)
             }
+            }
+            
             VStack {
                 ScrollView {
                 Text("The Stairway to Heaven, Oahu")
@@ -92,7 +113,7 @@ struct StairwayToHeaven: View {
             }
             
             HStack(spacing: 50) {
-                NavigationLink(destination: KauaiMap()) {
+                NavigationLink(destination: StairwayToHeavenMap()) {
                     Text("See map!")
                 } .padding(.bottom)
                 NavigationLink(destination: Booking()) {
